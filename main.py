@@ -17,7 +17,7 @@ st.text_input("Enter your Name: ", key="name")
 
 # This dataset is used for the fish weight prediction.
 
-data = pd.read_csv("https://raw.githubusercontent.com/RosalesRM/ABIChallenge_MauricioRosales/Master/data/Fish.csv?token=GHSAT0AAAAAACD52C62NDIBWHUWYJDGKG2GZEL3JNQ")
+data = pd.read_csv("https://raw.githubusercontent.com/RosalesRM/ABIChallenge_MauricioRosales/Master/data/Fish.csv?token=GHSAT0AAAAAACD52C63AIOCZIU2Q3WDEI4KZEL3S3Q")
 
 
 # Load label encoder
