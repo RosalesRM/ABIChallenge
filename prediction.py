@@ -53,3 +53,6 @@ print(inputs.shape)
 prediction = best_xgboost_model.predict(inputs)
 print("final pred", np.squeeze(prediction,-1))
 
+# Adding some details
+print("final final")
+
