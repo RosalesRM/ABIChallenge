@@ -49,8 +49,8 @@ with left_column:
 
 input_Length1 = st.slider('Vertical length(cm)', 0.0, 59.0, 1.0)
 input_Length2 = st.slider('Diagonal length(cm)', 0.0, 63.5, 1.0)
-input_Length3 = st.slider('Cross length(cm)', 0.0,68, 1.0)
-input_Height = st.slider('Height(cm)', 0.0, 19, 1.0)
+input_Length3 = st.slider('Cross length(cm)', 0.0, 68.0, 1.0)
+input_Height = st.slider('Height(cm)', 0.0, 19.0, 1.0)
 input_Width = st.slider('Diagonal width(cm)', 0.0, 8.5, 1.0)
 
 # When the "Make Prediction" button is clicked, the selected fish species is 
