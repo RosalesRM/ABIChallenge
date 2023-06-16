@@ -14,6 +14,7 @@ def evauation_model(pred, y_val):
 
 # Load the dataset
 data = pd.read_csv("data/Fish.csv")
+np.unique(data['Species'])
 data_cleaned = data.drop("Weight", axis=1)
 y = data['Weight']
 

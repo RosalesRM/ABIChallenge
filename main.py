@@ -16,8 +16,8 @@ st.header("Fish Weight Prediction App")
 st.text_input("Enter your Name: ", key="name")
 
 # This dataset is used for the fish weight prediction.
-
-data = pd.read_csv("https://raw.githubusercontent.com/RosalesRM/ABIChallenge_MauricioRosales/Master/data/Fish.csv?token=GHSAT0AAAAAACD52C62NDIBWHUWYJDGKG2GZEL3JNQ")
+# Check issues with tokens in private repos... later
+#data = pd.read_csv("https://raw.githubusercontent.com/RosalesRM/ABIChallenge_MauricioRosales/Master/data/Fish.csv?token=GHSAT0AAAAAACD52C62NDIBWHUWYJDGKG2GZEL3JNQ")
 
 
 # Load label encoder
@@ -28,8 +28,8 @@ encoder.classes_ = np.load('classes.npy',allow_pickle=True)
 best_xgboost_model = xgb.XGBRegressor()
 best_xgboost_model.load_model("best_model.json")
 
-if st.checkbox('Show Training Dataframe'):
-    data
+# if st.checkbox('Show Training Dataframe'):
+#     data
     
 # The user is prompted to select the relevant features of the fish using sliders 
 # and a radio button. The sliders allow the user to select values for vertical 
@@ -40,13 +40,13 @@ left_column, right_column = st.columns(2)
 with left_column:
     inp_species = st.radio(
         'Name of the fish:',
-        np.unique(data['Species']))
+        ['Bream', 'Parkki', 'Perch', 'Pike', 'Roach', 'Smelt', 'Whitefish'])
 
-input_Length1 = st.slider('Vertical length(cm)', 0.0, max(data["Length1"]), 1.0)
-input_Length2 = st.slider('Diagonal length(cm)', 0.0, max(data["Length2"]), 1.0)
-input_Length3 = st.slider('Cross length(cm)', 0.0, max(data["Length3"]), 1.0)
-input_Height = st.slider('Height(cm)', 0.0, max(data["Height"]), 1.0)
-input_Width = st.slider('Diagonal width(cm)', 0.0, max(data["Width"]), 1.0)
+input_Length1 = st.slider('Vertical length(cm)', 0.0, 59.0, 1.0)
+input_Length2 = st.slider('Diagonal length(cm)', 0.0, 63.5, 1.0)
+input_Length3 = st.slider('Cross length(cm)', 0.0,68, 1.0)
+input_Height = st.slider('Height(cm)', 0.0, 19, 1.0)
+input_Width = st.slider('Diagonal width(cm)', 0.0, 8.5, 1.0)
 
 # When the "Make Prediction" button is clicked, the selected fish species is 
 # transformed using the label encoder, and the input features are combined 
