@@ -16,8 +16,13 @@ st.header("Fish Weight Prediction App")
 st.text_input("Enter your Name: ", key="name")
 
 # This dataset is used for the fish weight prediction.
-# Check issues with tokens in private repos... later
-#data = pd.read_csv("https://raw.githubusercontent.com/RosalesRM/ABIChallenge_MauricioRosales/Master/data/Fish.csv?token=GHSAT0AAAAAACD52C62NDIBWHUWYJDGKG2GZEL3JNQ")
+# <<<<<<< HEAD
+# # Check issues with tokens in private repos... later
+# #data = pd.read_csv("https://raw.githubusercontent.com/RosalesRM/ABIChallenge_MauricioRosales/Master/data/Fish.csv?token=GHSAT0AAAAAACD52C62NDIBWHUWYJDGKG2GZEL3JNQ")
+# =======
+
+# data = pd.read_csv("https://raw.githubusercontent.com/RosalesRM/ABIChallenge_MauricioRosales/Master/data/Fish.csv?token=GHSAT0AAAAAACD52C63AIOCZIU2Q3WDEI4KZEL3S3Q")
+# >>>>>>> d8dba969838a0c98d142e9112062af5dd7e62d2c
 
 
 # Load label encoder
