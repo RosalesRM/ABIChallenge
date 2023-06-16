@@ -1,2 +1,2 @@
 # ABIChallenge_MauricioRosales
-This repo is related t AB InBev MLOps Challenge v7
+This repo is related to AB InBev MLOps Challenge v7
